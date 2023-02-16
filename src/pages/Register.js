@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 
 function Register() {
     const navigate = useNavigate()
@@ -63,59 +66,41 @@ function Register() {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>First name :
-                    <input
-                        type="text"
-                        name="fname"
-                        value={inputs.fname || ""}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>Last name :
-                    <input
-                        type="text"
-                        name="lname"
-                        value={inputs.lname || ""}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>Username :
-                    <input
-                        type="text"
-                        name="username"
-                        value={inputs.username || ""}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>Password :
-                    <input
-                        type="password"
-                        name="password"
-                        value={inputs.password || ""}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>Email :
-                    <input
-                        type="email"
-                        name="email"
-                        value={inputs.email || ""}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>Avatar :
-                    <input
-                        type="text"
-                        name="avatar"
-                        value={inputs.avatar || ""}
-                        onChange={handleChange}
-                    />
-                </label>
-                <input type="submit" />
-            </form>
-        </div>
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicFullname">
+
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control type="text" name="fname" value={inputs.fname || ""} onChange={handleChange} placeholder="Enter First name" />
+
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="text" name="lname" value={inputs.lname || ""} onChange={handleChange} placeholder="Enter Last name" />    
+
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicUandP">
+
+                    <Form.Label>First name</Form.Label>
+                    <Form.Control type="text" name="username" value={inputs.username || ""} onChange={handleChange} placeholder="Enter Username" />
+
+                    <Form.Label>Last name</Form.Label>
+                    <Form.Control type="password" name="password" value={inputs.password || ""} onChange={handleChange} placeholder="Enter Password" />    
+                
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicUandP">
+
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" name="email" value={inputs.email || ""} onChange={handleChange} placeholder="Enter email" />   
+
+                    <Form.Label>Avatar</Form.Label>
+                    <Form.Control type="text" name="text" value={inputs.email || ""} onChange={handleChange} placeholder="http//:example-avatar.jpg" />   
+                
+                </Form.Group>
+    
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form> 
     )
 }
 
