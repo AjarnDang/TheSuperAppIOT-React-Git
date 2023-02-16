@@ -7,10 +7,22 @@
 }
 .signup-form {
     min-height: 100vh;
-  }
+}
 .form-bg-white {
     background-color: white;
-    border-radius: 6px;
+    border-radius: 8px 8px 6px 6px;
+}
+.reg-row {
+    padding:5px 1.5em;
+}
+.reg-submit {
+    margin: 0 1em 1em 1em;
+    padding: 0.5rem 2rem;
+}
+h1.text-center {
+    border-radius: 6px 6px 0 0;
+    background-color: #1C93D1;
+    padding: 0.5em 0;
 }
 
 @media screen and (max-width: 576px) {

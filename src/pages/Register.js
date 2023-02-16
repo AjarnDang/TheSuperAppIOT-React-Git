@@ -30,10 +30,12 @@ function Register() {
         var raw = JSON.stringify({
             "fname": inputs.fname,
             "lname": inputs.lname,
-            "username": inputs.username,
-            "password": inputs.password,
-            "email": inputs.lname,
-            "avatar": inputs.lname
+            "age": inputs.age,
+            "email": inputs.email,
+            "phone": inputs.phone,
+            "jobtitle": inputs.jobtitle,
+            "company": inputs.company,
+            "description": inputs.description
         });
 
         var requestOptions = {
@@ -70,9 +72,10 @@ function Register() {
         <body className='signup-body'>
             <div className='container'>
                 <div className='signup-form d-flex align-items-center justify-content-center'>
+                    
                     <Form className='form-bg-white my-3' onSubmit={handleSubmit}>
-                    <h1>Registration</h1>       
-                        <Row className="mb-3">
+                    <h1 className='text-center text-white font-weight-bolder'>Registration</h1>
+                        <Row className="mb-3 reg-row">
                             <Col lg={2} md={2} sm="auto">
                                 <Form.Group controlId="formBasicTitle">
                                     <Form.Label className='label'>Title <span className='text-danger'>*</span></Form.Label>
@@ -97,7 +100,7 @@ function Register() {
                             </Col>
                         </Row>
 
-                        <Row className="mb-3">
+                        <Row className="mb-3 reg-row">
                             <Col lg={4} md={4} sm="auto">
                                 <Form.Group controlId="formBasicAge">
                                     <Form.Label className='label'>Age</Form.Label>
@@ -118,7 +121,7 @@ function Register() {
                             </Col>
                         </Row>
 
-                        <Row className="mb-3">
+                        <Row className="mb-3 reg-row">
                             <Col lg={6} md={6} sm="auto">
                                 <Form.Group controlId="formBasicJobTitle">
                                     <Form.Label className='label'>Job Title <span className='text-danger'>*</span></Form.Label>
@@ -133,7 +136,7 @@ function Register() {
                             </Col>
                         </Row>
 
-                        <Row className="mb-3">
+                        <Row className="mb-3 reg-row">
                             <Col>
                                 <Form.Group controlId="formBasicTitle">
                                     <Form.Label className='label'>Description <span className='text-danger'>*</span></Form.Label>
@@ -141,10 +144,11 @@ function Register() {
                                 </Form.Group>
                             </Col>
                         </Row>
-
-                        <Button variant="primary" type="submit">
+                        <div className='text-center'>
+                        <Button variant="primary" type="submit" className='reg-submit'>
                             Submit
-                        </Button>
+                        </Button>  
+                        </div> 
                     </Form>
                 </div>
             </div>
