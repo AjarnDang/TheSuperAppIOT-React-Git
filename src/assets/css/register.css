@@ -1,0 +1,20 @@
+.signup-body {
+    background-image: url("../img/login-bg.png");
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+}
+.signup-form {
+    min-height: 100vh;
+  }
+.form-bg-white {
+    background-color: white;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 576px) {
+    .label {
+        margin-top: 0.5em;
+    }
+} 
