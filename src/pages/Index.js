@@ -1,8 +1,9 @@
+import React from "react";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import Sidebar from "../components/Sidebar";
 
 function Index() {
   const MySwal = withReactContent(Swal)
@@ -45,16 +46,18 @@ function Index() {
    else {
     return (
       <div>
+        
         <p>{user.id}</p> 
         <p>{user.fname}</p> 
         <p>{user.lname}</p>
         <p>{user.username}</p>
         <p>{user.email}</p>
-        <img src={user.avatar} alt={user.id} width={100} />
-        
+        <img src={user.avatar} alt={user.id} width={100} /> 
       </div>
     )
   }
+  
+
 }
 
 export default Index
