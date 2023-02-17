@@ -2,7 +2,11 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <div>
+      <nav className='bg-dark'>
+      Header
+      </nav>   
+    </div>
   )
 }
 
