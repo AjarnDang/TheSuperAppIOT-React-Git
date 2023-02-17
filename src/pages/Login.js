@@ -80,11 +80,8 @@ function Login() {
             <div className="form-group mt-3">
               <input className="form-control" type="password" name="password" value={inputs.password || ""} onChange={handleChange} placeholder="Password" />
             </div>
-            <div className="form-group mt-2">
-              <label className="form-check-label">
-                <input type="checkbox" className="form-check-input" />
-                &nbsp; Remember me
-              </label>
+            <div className="form-group mt-2">  
+              <input lassName="form-control" type="checkbox" /> Remember me
             </div>
             <div className="justify-content-center text-center w-100 mt-5">
               <input className="btn btn-primary px-4" type="submit" value="Login" />

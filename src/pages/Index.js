@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 function Index() {
   const MySwal = withReactContent(Swal)
@@ -12,7 +13,7 @@ function Index() {
   const [isLoaded, setIsLoaded] = useState(true);
   const [user, setUser] = useState([]);
 
-  useEffect(() => {
+useEffect(() => {
     const token = localStorage.getItem('token')
     var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer " + token);
@@ -40,20 +41,24 @@ function Index() {
         console.log(result)
       })
       .catch(error => console.log('error', error));
-  }, [])
+    }, 
+    [])
 
   if (isLoaded) return (<div>Loading</div>)
    else {
     return (
-      <div>
-        
-        <p>{user.id}</p> 
-        <p>{user.fname}</p> 
-        <p>{user.lname}</p>
-        <p>{user.username}</p>
-        <p>{user.email}</p>
-        <img src={user.avatar} alt={user.id} width={100} /> 
-      </div>
+      <div>   
+        <Header />
+        <div>
+          <p>{user.id}</p> 
+          <p>{user.fname}</p> 
+          <p>{user.lname}</p>
+          <p className="bg-dark text-center">{user.username}</p>
+          <p>{user.email}</p>
+          <img src={user.avatar} alt={user.id} width={100} /> 
+        </div>
+        <Footer />
+      </div>   
     )
   }
   
