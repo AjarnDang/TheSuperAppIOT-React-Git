@@ -1,6 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
-
 import { ReactComponent as UserIcon } from "../assets/svg/user-profile-filled-svgrepo-com.svg";
 import { ReactComponent as NotiBellIcon } from "../assets/svg/notification-svgrepo-com.svg";
 import { ReactComponent as SettingIcon } from "../assets/svg/setting-svgrepo-com.svg";

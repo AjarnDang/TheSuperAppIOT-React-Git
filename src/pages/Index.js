@@ -3,11 +3,11 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { Helmet } from 'react-helmet';
 
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Helmets from "../components/Helmets";
 
 
 function Index() {
@@ -48,7 +48,11 @@ function Index() {
   },
     [])
 
-  if (isLoaded) return (<div>Loading</div>)
+  if (isLoaded) return (
+    <div className="d-flex align-items-center justify-content-center  h-3">
+      Loading
+    </div>
+    )
   else {
     return (
       <body id="page-top">
@@ -75,21 +79,7 @@ function Index() {
             <Footer />
           </div>
         </div>
-        <Helmet>
-        {/* Bootstrap core JavaScript */}
-        <script src="../vendor/jquery/jquery.min.js"></script>
-        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-        {/* Core plugin JavaScript */}
-        <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-        {/* Page level plugins */}
-        <script src="../assets/js/sb-admin-2.min.js"></script>
-
-        {/* Page level custom scripts */}
-        <script src="../assets/js/demo/chart-area-demo.js"></script>
-        <script src="../assets/js/demo/chart-pie-demo.js"></script>
-      </Helmet>
+        <Helmets />
       </body>
     )
   }
