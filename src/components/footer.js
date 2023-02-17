@@ -3,14 +3,14 @@ import React from 'react'
 function Footer() {
   return (
     <>
-
-      <footer>
-        <div className='container bg-dark h1 text-danger'>
-          Footer
-        </div>   
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2021</span>
+          </div>
+        </div>
       </footer>
-      
-      </>
+    </>
   )
 }
 

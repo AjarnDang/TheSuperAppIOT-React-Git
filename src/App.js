@@ -4,8 +4,6 @@ import Index from './pages/Index';
 import Register from './pages/Register';
 
 // CSS
-import './assets/css/all.min.css'
-import './assets/css/sb-admin-2.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

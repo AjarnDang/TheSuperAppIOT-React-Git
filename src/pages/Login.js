@@ -8,7 +8,6 @@ import withReactContent from 'sweetalert2-react-content'
 import '../assets/css/login.css';
 import spaLogo from "../assets/img/logo-black.png";
 
-
 function Login() {
   const navigate = useNavigate()
   const MySwal = withReactContent(Swal)
